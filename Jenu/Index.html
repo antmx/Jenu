@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<html lang="en" ng-app="jenuApp">
+<head>
+	<meta charset="utf-8" />
+	<meta content="Scans links" name="description" />
+	<title>Jenu - a link scanner</title>
+	<script src="lib/angular/angular.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="Styles/Styles.css" />
+</head>
+<body ng-controller="resourceLogController">
+
+    <h1>Jenu - a link scanner</h1>
+
+    <p>
+        Enter a URL to scan:
+    </p>
+
+    <p>
+	 	<input type="text" ng-init="startUrl='http://localhost/Jenu/'" ng-model="startUrl" placeholder="e.g. www.foo.com" class="start-url" />
+	 	<button ng-click="StartScanning(startUrl);">Start scanning</button>
+    </p>
+
+    <hr />
+
+	<p>
+		Link Count {{ResourceLog.EntryCount()}}
+	</p>
+
+    <table class="results">
+        <thead>
+            <tr>
+                <th>URL</th>
+                <th>Status</th>
+					<th>Size</th>
+                <th>Title</th>
+					<th>Description</th>
+					<th>Log Status</th>
+					<th>% Complete</th>
+					<th>Type</th>
+					<th>Encoding</th>
+					<th>In/Out Links</th>
+					<th>Server</th>
+            </tr>
+        </thead>
+        <tbody>
+		  	<tr ng-repeat="entry in ResourceLog.Entries" class="logstatus-{{entry.LogStatusCssSafe()}}">
+		  		<td>{{entry.Url.href}}</td>
+		  		<td>{{entry.Status}}</td>
+		 		<td>{{entry.ContentLength}}</td>
+		  		<td>{{entry.Title}}</td>
+		  		<td>{{entry.Description}}</td>
+		  		<td>{{entry.LogStatus}}</td>
+		  		<td>{{entry.PercentComplete}}</td>
+		  		<td>{{entry.ContentType}}</td>
+		  		<td>{{entry.ContentEncoding}}</td>
+		  		<td>{{entry.InLinks}}/{{entry.OutLinks}}</td>
+		 		<td>{{entry.Server}}</td>
+		  	</tr>
+        </tbody>
+    </table>
+
+	<script src="Scripts/Utilities/Namespace.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/Downloader.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/Resource.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/ResourceLog.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/Url.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/ContentParser.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/PageInfoParser.js" type="text/javascript"></script>
+	<script src="Scripts/Jenu/Scanner.js" type="text/javascript"></script>
+
+	<!--<script src="Scripts/Jenu/TestHarness.js" type="text/javascript"></script>-->
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/resourceLogController.js"></script>
+
+</body>
+</html>

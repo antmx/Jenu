@@ -1,0 +1,52 @@
+﻿@import url("test1.css");
+@import url('test2.css');
+@import "test3.css";
+@import 'test4.css';
+
+html, body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+p{
+	padding:0;
+	margin:4px 0;
+}
+
+input.start-url{
+	width:300px;
+}
+
+table.results {
+	font-size:10pt;
+}
+
+	table.results th {
+		font-weight: bold;
+		text-align: left;
+		padding-right: 4px;
+	}
+
+	table.results tr.status-200{
+		color:green;
+	}
+
+	table.results tr.logstatus-pending{
+		color:gray;
+	}
+
+	table.results tr.logstatus-in-progress{
+		color:lightgreen;
+	}
+
+	table.results tr.logstatus-complete{
+		color:green;
+	}
+
+tr.logstatus-error,
+tr.logstatus-not-found,
+tr.logstatus-forbidden,
+tr.logstatus-timeout,
+tr[class*="not-supported"],
+tr[class*="error"] {
+	color: red;
+}
