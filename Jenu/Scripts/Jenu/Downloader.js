@@ -16,7 +16,7 @@ Jenu.Core.Downloader = function (url, onProgress, onLoad, onError, onTimeout) {
 
 Jenu.Core.Downloader.prototype = {
 	Download: function () {
-		//debugger;
+		
 		var self = this;
 		var xhr = this.CreateCorsRequest("GET", this._url); //  "http://summerland.local/"
 
@@ -109,7 +109,7 @@ Jenu.Core.Downloader.prototype = {
 	},
 
 	IsProtocolSupported: function () {
-		//debugger;
+		
 		var regex = /^(http|https):/;
 		return regex.test(this._url);
 	}

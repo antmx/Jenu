@@ -28,6 +28,29 @@ Jenu.Core.ResourceLog.prototype = {
 		}
 	},
 
+	/// <summary>Records an entry in the log.</summary>
+	RecordEntry: function (url) {
+		//url = this.CleanUrl(url);
+		
+		if (url == null || !(url instanceof Jenu.Core.Url))
+			throw new Error(url + " must be a Jenu.Core.Url");
+
+		var matchingEntry = this.FindEntry(url);
+
+		if (matchingEntry != null) {
+			// Update existing entry's InLink count
+			matchingEntry.InLinks += 1;
+			return matchingEntry;
+		}
+		else {
+			// Add new entry
+			var newEntry = new Jenu.Core.Resource(url, this.CaseSensitive);
+			newEntry.InLinks = this.EntryCount() == 0 ? 0 : 1;
+			this.Entries[this.Entries.length] = newEntry;
+			return newEntry;
+		}
+	},
+
 	/// <summary>Searches for the next available unprocessed url and returns it.</summary>
 	FetchNextPendingUrl: function () {
 
@@ -41,31 +64,8 @@ Jenu.Core.ResourceLog.prototype = {
 		return null;
 	},
 
-	/// <summary>Records an entry in the log.</summary>
-	RecordEntry: function (url) {
-		//url = this.CleanUrl(url);
-		debugger;
-		var matchingEntry = this.FindEntry(url);
-
-		if (matchingEntry != null) {
-			// Update existing entry's InLink count
-			//debugger;
-			matchingEntry.InLinks += 1;
-			return matchingEntry;
-		}
-		else {
-			// Add new entry
-			//debugger;
-			var newEntry = new Jenu.Core.Resource(url, this.CaseSensitive);
-			newEntry.InLinks = this.EntryCount() == 0 ? 0 : 1;
-			this.Entries[this.Entries.length] = newEntry;
-			return newEntry;
-		}
-	},
-
 	CleanUrl: function (url) {
 		// todo - attempt to clean up url
-		debugger;
 		//url = String(url);
 		while (url.lastIndexOf("#") == url.length - 1) {
 			debugger;
@@ -77,7 +77,7 @@ Jenu.Core.ResourceLog.prototype = {
 
 	/// <summary>Finds an entry in the log.</summary>
 	FindEntry: function (url) {
-
+		
 		for (var idx = 0; idx < this.Entries.length; idx++) {
 			var idxEntry = this.Entries[idx];
 

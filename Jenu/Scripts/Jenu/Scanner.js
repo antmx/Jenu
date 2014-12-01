@@ -24,13 +24,13 @@ Jenu.Core.Scanner = function (startUrl, resourceLog, updateCallback, contentPars
 Jenu.Core.Scanner.prototype = {
 
 	Start: function () {
-		//debugger;
+		
 		this.ResourceLog.RecordEntry(this.StartUrl);
 		this.ProcessUrl(this.StartUrl);
 	},
 
 	ProcessUrl: function (url) {
-		//debugger;
+		
 		var self = this;
 		var resource = this.ResourceLog.FindEntry(url);
 
@@ -48,9 +48,10 @@ Jenu.Core.Scanner.prototype = {
 
 					// onLoad
 					function (xhr) {
-						//debugger;
+						
 						if (IsValidStatus(xhr.status)) {
 							resource.LogStatus = "complete";
+							resource.PercentComplete = 100;
 							resource.LoadXhr(xhr);
 
 							// Parse page info
@@ -66,7 +67,7 @@ Jenu.Core.Scanner.prototype = {
 							}
 						}
 						else {
-							//debugger;
+							
 							resource.LogStatus = xhr.statusText || "error";
 							resource.LoadXhr(xhr);
 						}
@@ -105,7 +106,7 @@ Jenu.Core.Scanner.prototype = {
 				}
 			}
 		} catch (e) {
-			//debugger;
+			
 			resource.Status = xhr.status;
 			resource.LogStatus = xhr.statusText || "error";
 		}
@@ -132,7 +133,7 @@ Jenu.Core.Scanner.prototype = {
 
 			var statusCategory = String(status).substr(0, 1);
 
-			if (["2", "3"].indexOf(statusCategory) > -1)
+			if (["2", "3"].indexOf(statusCategory) > -1) // http response codes in the 200 or 300 ranges
 				return true;
 
 			return false;

@@ -89,29 +89,56 @@ Jenu.Core.ContentParser.prototype = {
 	},
 
 	ParseCss: function (content) {
-		var urls = [];
-		//debugger;
+
 		// todo - implement CSS parsing logic
-		// Handle - @import url("fineprint.css")
-		//				@import 'custom.css';
+		// Handle - @import url("fineprint.css") - done
+		//				@import 'custom.css'; - done
+		//				background*:*url("foo.png")
 
-		//var rxImport = /\@import\s+[url\(]{0,1}[\"|']?(.*?)[\"|']?[\)]?\s*;/g;
-		//var rxImport = /\@import\s+(?:[url\(])?(?:[\"|'])?(?:.[^"\')])+(?:[\"|'])?(?:[\)])?\s*\;/;
+		var urls = [];
+		urls = urls.concat(this.ParseCssImports(content));
+		//urls = urls.concat(this.ParseCssStyleUrls(content));
+
+		//debugger;
+		return urls;
+	},
+
+	ParseCssImports: function (content) {
+
+		var urls = [];
 		var rxImport = /@import\s*(url)?\s*\(?([^;]+?)\)?;/ig;
-		//var pattern = '(?:@import)(?:\\s)(?:url)?(?:(?:(?:\\()(["\'])?(?:[^"\')]+)\\1(?:\\))|(["\'])(?:.+)\\2)(?:[A-Z\\s])*)+(?:;)';
-		//var rxImport = new RegExp(pattern);
-
 		var match = null;
 
 		do {
 			match = rxImport.exec(content);
+
 			if (match) {
-				var url = String(match[2]).replace(/['"]/g, "");
-				urls.push(url);
+				var url = String(match[2]).replace(/['"]/g, ""); // trim edge quotes
+				var objUrl = new Jenu.Core.Url(url, this._contentUrl.href);
+				urls.push(objUrl);
 			}
 		} while (match);
 
-		//debugger;
+		return urls;
+	},
+
+	ParseCssStyleUrls: function (content) {
+
+		var urls = [];
+		// /@import\s*(url)?\s*\(?([^;]+?)\)?;/ig;
+		var rxImport = /.*/ig; 
+		var match = null;
+
+		do {
+			match = rxImport.exec(content);
+
+			if (match) {
+				var url = String(match[2]).replace(/['"]/g, ""); // trim edge quotes
+				var objUrl = new Jenu.Core.Url(url, this._contentUrl.href);
+				urls.push(objUrl);
+			}
+		} while (match);
+
 		return urls;
 	},
 
@@ -130,7 +157,6 @@ Jenu.Core.ContentParser.prototype = {
 		//this._dom = document.createElement("div");
 		//this._dom.document = this._content;
 
-		//debugger;
 		var fragment = document.createDocumentFragment();
 		var element = document.createElement('html');
 		fragment.appendChild(element);
