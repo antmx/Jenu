@@ -90,13 +90,14 @@ Jenu.Core.ContentParser.prototype = {
 
 	ParseCss: function (content) {
 		var urls = [];
-		debugger;
+		//debugger;
 		// todo - implement CSS parsing logic
 		// Handle - @import url("fineprint.css")
 		//				@import 'custom.css';
 
 		//var rxImport = /\@import\s+[url\(]{0,1}[\"|']?(.*?)[\"|']?[\)]?\s*;/g;
-		var rxImport = /\@import\s+(?:[url\(])?(?:[\"|'])?(?:.[^"\')])+(?:[\"|'])?(?:[\)])?\s*\;/;
+		//var rxImport = /\@import\s+(?:[url\(])?(?:[\"|'])?(?:.[^"\')])+(?:[\"|'])?(?:[\)])?\s*\;/;
+		var rxImport = /@import\s*(url)?\s*\(?([^;]+?)\)?;/ig;
 		//var pattern = '(?:@import)(?:\\s)(?:url)?(?:(?:(?:\\()(["\'])?(?:[^"\')]+)\\1(?:\\))|(["\'])(?:.+)\\2)(?:[A-Z\\s])*)+(?:;)';
 		//var rxImport = new RegExp(pattern);
 
@@ -105,11 +106,12 @@ Jenu.Core.ContentParser.prototype = {
 		do {
 			match = rxImport.exec(content);
 			if (match) {
-				//console.log(match[1], match[2]);
-				urls.push(match[1]);
+				var url = String(match[2]).replace(/['"]/g, "");
+				urls.push(url);
 			}
 		} while (match);
 
+		//debugger;
 		return urls;
 	},
 

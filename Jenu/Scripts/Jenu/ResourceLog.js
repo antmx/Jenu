@@ -8,6 +8,7 @@ Namespace.Create("Jenu.Core");
 
 // Define Jenu.Core.ResourceLog type
 Jenu.Core.ResourceLog = function (caseSensitive) {
+	
 	var self = this;
 
 	// Array of Resource objects
@@ -43,7 +44,7 @@ Jenu.Core.ResourceLog.prototype = {
 	/// <summary>Records an entry in the log.</summary>
 	RecordEntry: function (url) {
 		//url = this.CleanUrl(url);
-
+		debugger;
 		var matchingEntry = this.FindEntry(url);
 
 		if (matchingEntry != null) {
