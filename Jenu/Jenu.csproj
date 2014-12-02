@@ -81,6 +81,7 @@
     <Content Include="Scripts\Jenu\Url.js" />
     <Content Include="Scripts\Jenu\ContentParser.js" />
     <Content Include="Scripts\Utilities\Namespace.js" />
+    <Content Include="Styles\img\motocross-action-mag-single.jpg" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\test4.css" />
     <Content Include="Styles\test3.css" />

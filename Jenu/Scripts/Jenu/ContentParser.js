@@ -36,7 +36,6 @@ Jenu.Core.ContentParser = function () {
 	this._content = null;
 	this._contentType = null;
 	this._contentUrl = null;
-
 	this._fragment = null;
 	this._dom = null;
 };
@@ -97,7 +96,7 @@ Jenu.Core.ContentParser.prototype = {
 
 		var urls = [];
 		urls = urls.concat(this.ParseCssImports(content));
-		//urls = urls.concat(this.ParseCssStyleUrls(content));
+		urls = urls.concat(this.ParseCssStyleUrls(content));
 
 		//debugger;
 		return urls;
@@ -125,15 +124,16 @@ Jenu.Core.ContentParser.prototype = {
 	ParseCssStyleUrls: function (content) {
 
 		var urls = [];
-		// /@import\s*(url)?\s*\(?([^;]+?)\)?;/ig;
-		var rxImport = /.*/ig; 
+		var rxImport = /(background-image|background)\s*\:(.*?)(url\()['|"]?(.*?)['|"]?\)(.*?)\;/g;
 		var match = null;
 
 		do {
+			//debugger;
 			match = rxImport.exec(content);
 
 			if (match) {
-				var url = String(match[2]).replace(/['"]/g, ""); // trim edge quotes
+				//debugger;
+				var url = String(match[4]);
 				var objUrl = new Jenu.Core.Url(url, this._contentUrl.href);
 				urls.push(objUrl);
 			}

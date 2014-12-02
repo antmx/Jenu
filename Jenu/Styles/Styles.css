@@ -50,3 +50,8 @@ tr[class*="not-supported"],
 tr[class*="error"] {
 	color: red;
 }
+
+.bkgrnd {
+	background: no-repeat url('img/motocross-action-mag-single.jpg') fixed;
+	background-image: url(img/motocross-action-mag-single.jpg);
+}
