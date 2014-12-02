@@ -59,7 +59,6 @@ Jenu.Core.ContentParser.prototype = {
 					break;
 
 				case "text/css":
-					// todo - parse @import references
 					urls = this.ParseCss(this._content);
 					break;
 
@@ -89,16 +88,11 @@ Jenu.Core.ContentParser.prototype = {
 
 	ParseCss: function (content) {
 
-		// todo - implement CSS parsing logic
-		// Handle - @import url("fineprint.css") - done
-		//				@import 'custom.css'; - done
-		//				background*:*url("foo.png")
-
 		var urls = [];
 		urls = urls.concat(this.ParseCssImports(content));
 		urls = urls.concat(this.ParseCssStyleUrls(content));
+		// Add other CSS urls here...
 
-		//debugger;
 		return urls;
 	},
 
@@ -128,11 +122,9 @@ Jenu.Core.ContentParser.prototype = {
 		var match = null;
 
 		do {
-			//debugger;
 			match = rxImport.exec(content);
 
 			if (match) {
-				//debugger;
 				var url = String(match[4]);
 				var objUrl = new Jenu.Core.Url(url, this._contentUrl.href);
 				urls.push(objUrl);
