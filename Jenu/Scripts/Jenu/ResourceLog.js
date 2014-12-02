@@ -28,6 +28,7 @@ Jenu.Core.ResourceLog.prototype = {
 		}
 	},
 
+
 	/// <summary>Records an entry in the log.</summary>
 	RecordEntry: function (url) {
 		//url = this.CleanUrl(url);
