@@ -8,7 +8,7 @@ Namespace.Create("Jenu.Core");
 
 /*jslint regexp: true, maxerr: 50, indent: 2 */
 
-// Define Jenu.Core.UrlResolver type
+// Define Jenu.Core.Url type
 Jenu.Core.Url = function (url, baseURL) {
 	this.origin = null;
 	this.href = null;
@@ -21,6 +21,7 @@ Jenu.Core.Url = function (url, baseURL) {
 	this.pathname = null;
 	this.search = null;
 	this.hash = null;
+	this.title = null;
 
 	this.Parse(url, baseURL);
 };

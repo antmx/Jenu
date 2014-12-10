@@ -17,7 +17,7 @@
     </p>
 
     <p>
-	 	<input type="text" ng-init="startUrl='http://localhost/Jenu/styles/styles.css'" ng-model="startUrl" placeholder="e.g. www.foo.com" class="start-url" />
+	 	<input type="text" ng-init="startUrl='http://www.breaks-in-summerland-tenerife.co.uk/'" ng-model="startUrl" placeholder="e.g. www.foo.com" class="start-url" />
 	 	<button ng-click="StartScanning(startUrl, false);">Start scanning</button>
     </p>
 
@@ -37,6 +37,7 @@
 					<th>Description</th>
 					<th>Log Status</th>
 					<th>% Complete</th>
+					<th>Dur</th>
 					<th>Type</th>
 					<th>Encoding</th>
 					<th>In/Out Links</th>
@@ -52,6 +53,7 @@
 		  		<td>{{entry.Description}}</td>
 		  		<td>{{entry.LogStatus}}</td>
 		  		<td>{{entry.PercentComplete}}</td>
+		 		<td>{{entry.Duration()}}</td>
 		  		<td>{{entry.ContentType}}</td>
 		  		<td>{{entry.ContentEncoding}}</td>
 		  		<td>{{entry.InLinks}}/{{entry.OutLinks}}</td>

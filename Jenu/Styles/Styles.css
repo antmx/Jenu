@@ -24,6 +24,14 @@ table.results {
 		font-weight: bold;
 		text-align: left;
 		padding-right: 4px;
+		max-width:200px !important;
+	}
+
+	table.results td {
+		overflow-x:hidden;
+		max-width:200px !important;
+		max-height:17px;
+		height:17px;
 	}
 
 	table.results tr.status-200{

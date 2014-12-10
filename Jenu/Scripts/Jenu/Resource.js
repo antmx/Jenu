@@ -25,7 +25,7 @@ Jenu.Core.Resource = function (url, caseSensitive) {
 	this.LastModified = "";
 
 	/* Properties that come from the resource's HTML */
-	this.Title = "";
+	this.Title = url.title || ""; // May also get overwritten after HTML is downloaded and parsed
 	this.Description = "";
 
 	/* Stats */
@@ -34,10 +34,27 @@ Jenu.Core.Resource = function (url, caseSensitive) {
 	this.OutLinks = 0;
 	this.InLinks = 0;
 	this.Error = "";
-	this.Duration = 0; // ms
+	this.DateStart = null;
+	this.DateEnd = null;
 };
 
 Jenu.Core.Resource.prototype = {
+
+	/// <summary>Calculates the duration in millisenconds between the start and end of the download process.</summary>
+	Duration: function () {
+		if (this.DateStart && this.DateEnd) {
+			// Convert both dates to milliseconds
+			var date1_ms = this.DateStart.getTime();
+			var date2_ms = this.DateEnd.getTime();
+
+			// Calculate the difference in milliseconds
+			var difference_ms = date2_ms - date1_ms;
+
+			return difference_ms + "ms";
+		}
+
+		return null;
+	},
 
 	/// <summary>Sets properties that come from the XHR and its response headers.</summary>
 	LoadXhr: function (xhr) {

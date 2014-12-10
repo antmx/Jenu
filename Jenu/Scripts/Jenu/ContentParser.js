@@ -168,6 +168,9 @@ Jenu.Core.ContentParser.prototype = {
 
 		for (var i = 0; i < tags.length; i++) {
 
+			// Attempt to get the tag's title attribute
+			var title = this.ParseTagTitle(tags[i]);
+
 			for (var j = 0; j < urlAttribs.length; j++) {
 
 				var urlAttrib = urlAttribs[j];
@@ -186,6 +189,7 @@ Jenu.Core.ContentParser.prototype = {
 					if (url != null && url.length > 0) {
 						//console.log(url);
 						var objUrl = new Jenu.Core.Url(url, this._contentUrl.href);
+						objUrl.title = title;
 						list.push(objUrl);
 					}
 				}
@@ -194,5 +198,10 @@ Jenu.Core.ContentParser.prototype = {
 		}
 
 		return list;
+	},
+
+	ParseTagTitle: function (tag) {
+		var titleAttrib = tag.attributes["title"];
+		return titleAttrib != null ? titleAttrib.value : null;
 	}
 };

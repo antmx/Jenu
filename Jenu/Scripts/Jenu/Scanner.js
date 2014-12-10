@@ -24,7 +24,7 @@ Jenu.Core.Scanner = function (startUrl, resourceLog, updateCallback, contentPars
 Jenu.Core.Scanner.prototype = {
 
 	Start: function () {
-		
+		//debugger;
 		this.ResourceLog.RecordEntry(this.StartUrl);
 		this.ProcessUrl(this.StartUrl);
 	},
@@ -53,6 +53,7 @@ Jenu.Core.Scanner.prototype = {
 							resource.LogStatus = "complete";
 							resource.PercentComplete = 100;
 							resource.LoadXhr(xhr);
+							resource.DateEnd = new Date();
 
 							// Parse page info
 							var pageInfo = self.PageInfoParser.Parse(xhr.responseText, resource.ContentType);
@@ -97,6 +98,7 @@ Jenu.Core.Scanner.prototype = {
 					});
 
 				if (downloader.IsProtocolSupported()) {
+					resource.DateStart = new Date();
 					downloader.Download();
 				}
 				else {

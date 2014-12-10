@@ -6,7 +6,10 @@ Implement parser to extract URLs from HTML tag attributes of type '%URI;' in the
 ###################################
 
 Implement Resource.Duration
-Don't set Resource.ContentLength or PercentComplete on 404 or other errors
+
+###################################
+Setup Guide
+CORS on IIS 6: http://enable-cors.org/server_iis6.html
 
 ###################################
 
