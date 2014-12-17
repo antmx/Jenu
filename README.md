@@ -9,7 +9,7 @@ Jenu checks websites for broken links. Link verification is performed on HTML an
 
 Jenu works by recursively following web page links and other types of URL reference, parsing links in the returned content and following those links, building up a log of links in the website.
 
-**NOTE:** because Jenu is written in JavaScript and due to browser security constraints, *Cross-origin resource sharing (CORS)* must be implemented on the website you wish to scan. This is achieved by returning a couple of response headers with each response from the website being scanned. In IIS7, this can be done by editing the web.config file's *customHeaders* section:
+**NOTE** because Jenu is written in JavaScript and due to browser security constraints, *Cross-origin resource sharing (CORS)* must be implemented on the website you wish to scan. This is achieved by returning a couple of response headers with each response from the website being scanned. In IIS7, this can be done by editing the web.config file's *customHeaders* section:
 
 ``` XML
 <?xml version="1.0"?>
@@ -24,9 +24,14 @@ Jenu works by recursively following web page links and other types of URL refere
 		</httpProtocol>
 	</system.webServer>
 </configuration>
+
 ```
 
-####Setup:####
+####Demo####
+A working demo can be seen [here](http://www.netricity.co.uk/code-samples/javascript/jenu/).
+
+
+####Setup####
  - Enable *CORS* on the website you want to scan (see above).
  - Download the source and place in a sub-folder of an exisiting local or remote website, e.g. */jenu*
  - Browse to the Jenu page in the folder you just set up, e.g. *http://your.site/jenu/Index.html*
