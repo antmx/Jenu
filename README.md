@@ -9,6 +9,7 @@ Jenu works by recursively following web page links, parsing links in the content
 
 NOTE: because Jenu is written in JavaScript, due to browser security constraints, Cross-origin resource sharing (CORS) must be implemented on the website you wish to scan. This is achieved by response headers. In IIS7, this can be done by editing the web.config file's customHeaders section:
 
+``` XML
 <?xml version="1.0"?>
 <configuration>
 	<system.webServer>
@@ -21,7 +22,7 @@ NOTE: because Jenu is written in JavaScript, due to browser security constraints
 		</httpProtocol>
 	</system.webServer>
 </configuration>
-
+```
 
 Setup:
 Enable CORS on the website you want to scan (see above).
