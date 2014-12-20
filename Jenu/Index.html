@@ -23,9 +23,17 @@
 
     <hr />
 
-	<p>
-		Link Count {{ResourceLog.EntryCount()}}
-	</p>
+	<ul class="infoList">
+		<li>
+			{{ResourceLog.CompletedCount()}} of {{ResourceLog.EntryCount()}} URLs
+		</li>
+		<li>
+			{{ResourceLog.PendingCount()}} pending
+		</li>
+		<li>
+			{{ResourceLog.CompletedPercentage()}}% done
+		</li>
+	</ul>
 
     <table class="results">
         <thead>

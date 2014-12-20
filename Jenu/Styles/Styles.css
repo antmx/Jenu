@@ -16,6 +16,18 @@ input.start-url{
 	width:300px;
 }
 
+.infoList {
+	margin:4px 0;
+	padding:0;
+	overflow:auto;
+}
+
+	.infoList li {
+		float: left;
+		padding-right: 18px;
+		list-style-type:none;
+	}
+
 table.results {
 	font-size:10pt;
 }

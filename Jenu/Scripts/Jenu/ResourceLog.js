@@ -28,11 +28,10 @@ Jenu.Core.ResourceLog.prototype = {
 		}
 	},
 
-
 	/// <summary>Records an entry in the log.</summary>
 	RecordEntry: function (url) {
 		//url = this.CleanUrl(url);
-		
+
 		if (url == null || !(url instanceof Jenu.Core.Url))
 			throw new Error(url + " must be a Jenu.Core.Url");
 
@@ -78,7 +77,7 @@ Jenu.Core.ResourceLog.prototype = {
 
 	/// <summary>Finds an entry in the log.</summary>
 	FindEntry: function (url) {
-		
+
 		for (var idx = 0; idx < this.Entries.length; idx++) {
 			var idxEntry = this.Entries[idx];
 
@@ -91,6 +90,52 @@ Jenu.Core.ResourceLog.prototype = {
 
 	EntryCount: function () {
 		return this.Entries.length;
+	},
+
+	/// <summary>Gets the number of entries that are still pending checking.</summary>
+	PendingCount: function () {
+
+		var count = 0;
+
+		for (var idx = 0; idx < this.Entries.length; idx++) {
+			var idxEntry = this.Entries[idx];
+
+			if (idxEntry.LogStatus == "pending")
+				count++;
+		}
+
+		return count;
+	},
+
+	/// <summary>Gets the number of entries that have been checked.</summary>
+	CompletedCount: function () {
+
+		var count = 0;
+		var notCompletedStatuses = ["pending", "in progress"];
+
+		for (var idx = 0; idx < this.Entries.length; idx++) {
+			var idxEntry = this.Entries[idx];
+
+			if (notCompletedStatuses.indexOf(idxEntry.LogStatus) == -1)
+				count++;
+		}
+
+		return count;
+	},
+
+	/// <summary>Gets the percentage of entries that have been checked.</summary>
+	CompletedPercentage: function () {
+		
+		var total = this.EntryCount();
+		var completed = this.CompletedCount();
+		var percentage = 0
+
+		if (total > 0) {
+			percentage = completed / total * 100;
+			percentage = Math.round(percentage);
+		}
+
+		return percentage;
 	}
 
 };
