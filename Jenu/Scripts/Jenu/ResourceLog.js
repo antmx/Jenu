@@ -138,5 +138,5 @@ Jenu.Core.ResourceLog.prototype = {
 		return percentage;
 	}
 
-	// 
+	///
 };
