@@ -62,7 +62,6 @@
     <Content Include="Scripts\Jenu\Downloader.js" />
     <Content Include="Scripts\Jenu\PageInfoParser.js" />
     <Content Include="Scripts\Jenu\ResourceLog.js" />
-    <Content Include="Scripts\Jenu\LogEntry.js" />
     <Content Include="Scripts\Jenu\Resource.js" />
     <Content Include="Scripts\Jenu\Scanner.js" />
     <Content Include="lib\angular\angular.min.js.map" />

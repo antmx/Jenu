@@ -5,7 +5,8 @@ Implement parser to extract URLs from HTML tag attributes of type '%URI;' in the
 
 ###################################
 
-Implement Resource.Duration
+Implement Resource.LogStatusCategory and use in:
+	<tr ng-repeat="entry in ResourceLog.Entries" class="logstatus-{{entry.LogStatusCssSafe()}}">
 
 ###################################
 Setup Guide
