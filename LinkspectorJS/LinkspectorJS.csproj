@@ -88,8 +88,6 @@
     <Content Include="Scripts\LinkspectorJS\TestHarness.js" />
     <Content Include="Scripts\LinkspectorJS\Url.js" />
     <Content Include="Scripts\Utilities\Namespace.js" />
-    <Content Include="Scripts\Website\Controllers\Index.js" />
-    <Content Include="Scripts\Website\Views\Index.js" />
     <Content Include="Styles\img\motocross-action-mag-single.jpg" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Styles\test4.css" />
@@ -121,7 +119,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55228</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/Jenu</IISUrl>
+          <IISUrl>http://localhost/LinkspectorJS</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
