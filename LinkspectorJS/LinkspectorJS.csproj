@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A3662CD-A907-45C7-AA65-2C22E6D5F8D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LinkspectorJS</RootNamespace>
+    <AssemblyName>LinkspectorJS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controllers\resourceLogController.js" />
+    <Content Include="Jenu.rar.jpg" />
+    <Content Include="lib\angular\angular.js" />
+    <Content Include="lib\jasmine\boot.js" />
+    <Content Include="lib\jasmine\console.js" />
+    <Content Include="lib\jasmine\jasmine-html.js" />
+    <Content Include="lib\jasmine\jasmine.css" />
+    <Content Include="lib\jasmine\jasmine.js" />
+    <Content Include="lib\jasmine\jasmine_favicon.png" />
+    <Content Include="css\jasmine.css" />
+    <Content Include="Scripts\Jenu\Downloader.js" />
+    <Content Include="Scripts\Jenu\PageInfoParser.js" />
+    <Content Include="Scripts\Jenu\ResourceLog.js" />
+    <Content Include="Scripts\Jenu\Resource.js" />
+    <Content Include="Scripts\Jenu\Scanner.js" />
+    <Content Include="lib\angular\angular.min.js.map" />
+    <Content Include="Passwords.doc" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.html" />
+    <Content Include="Scripts\Jenu\TestHarness.js" />
+    <Content Include="Scripts\Jenu\Url.js" />
+    <Content Include="Scripts\Jenu\ContentParser.js" />
+    <Content Include="Scripts\LinkspectorJS\ContentParser.js" />
+    <Content Include="Scripts\LinkspectorJS\Downloader.js" />
+    <Content Include="Scripts\LinkspectorJS\PageInfoParser.js" />
+    <Content Include="Scripts\LinkspectorJS\Resource.js" />
+    <Content Include="Scripts\LinkspectorJS\ResourceLog.js" />
+    <Content Include="Scripts\LinkspectorJS\Scanner.js" />
+    <Content Include="Scripts\LinkspectorJS\TestHarness.js" />
+    <Content Include="Scripts\LinkspectorJS\Url.js" />
+    <Content Include="Scripts\Utilities\Namespace.js" />
+    <Content Include="Scripts\Website\Controllers\Index.js" />
+    <Content Include="Scripts\Website\Views\Index.js" />
+    <Content Include="Styles\img\motocross-action-mag-single.jpg" />
+    <Content Include="Styles\Styles.css" />
+    <Content Include="Styles\test4.css" />
+    <Content Include="Styles\test3.css" />
+    <Content Include="Styles\test2.css" />
+    <Content Include="Styles\test1.css" />
+    <Content Include="TestHarness.html" />
+    <Content Include="todo.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55228</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Jenu</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

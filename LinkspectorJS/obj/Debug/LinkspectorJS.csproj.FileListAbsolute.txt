@@ -1,0 +1,6 @@
+D:\Projects\LinkspectorJS\LinkspectorJS\bin\LinkspectorJS.dll.config
+D:\Projects\LinkspectorJS\LinkspectorJS\bin\LinkspectorJS.dll
+D:\Projects\LinkspectorJS\LinkspectorJS\bin\LinkspectorJS.pdb
+D:\Projects\LinkspectorJS\LinkspectorJS\obj\Debug\LinkspectorJS.csprojResolveAssemblyReference.cache
+D:\Projects\LinkspectorJS\LinkspectorJS\obj\Debug\LinkspectorJS.dll
+D:\Projects\LinkspectorJS\LinkspectorJS\obj\Debug\LinkspectorJS.pdb

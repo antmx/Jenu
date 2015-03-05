@@ -1,0 +1,6 @@
+D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe.config
+D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.exe
+D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.pdb
+D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe
+D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.pdb
+D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Linkspector.Console.csprojResolveAssemblyReference.cache
