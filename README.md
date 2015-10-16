@@ -3,7 +3,7 @@ LinkspectorJS
 
 ###A website link checker in JavaScript###
 
-Inspired by the legendary [**Xenu's Link Sleuth**](http://home.snafu.de/tilman/xenulink.html), a Windows application written in C++ and MFC.
+Inspired by the legendary [**Xenu's Link Sleuth**](http://home.snafu.de/tilman/xenulink.html) (a Windows application written in C++ and MFC).
 
 LinkspectorJS checks websites for broken links. Link verification is performed on HTML anchor links, images, frames, plug-ins, backgrounds, local image maps, style sheets and scripts. It displays a continously updated list of URLs with information about each, such as success/failure, content type, size, download duration, number of in links and out links.
 
