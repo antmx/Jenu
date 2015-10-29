@@ -1,6 +1,0 @@
-D:\Projects\Jenu\Jenu\bin\Jenu.dll.config
-D:\Projects\Jenu\Jenu\bin\Jenu.dll
-D:\Projects\Jenu\Jenu\bin\Jenu.pdb
-D:\Projects\Jenu\Jenu\obj\Debug\Jenu.csprojResolveAssemblyReference.cache
-D:\Projects\Jenu\Jenu\obj\Debug\Jenu.dll
-D:\Projects\Jenu\Jenu\obj\Debug\Jenu.pdb

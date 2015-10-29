@@ -29,5 +29,12 @@ namespace LinkspectorJS.Console
 			Print(new Uri("www.test.com", UriKind.RelativeOrAbsolute).ToString());
 
 		}
+
+      static void LinqTest()
+      {
+         var a = new[] { 1, 2, 3, 4 };
+
+         //a.ToList().ForEach()
+      }
 	}
 }

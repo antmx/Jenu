@@ -1,6 +1,7 @@
-D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe.config
-D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.exe
-D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.pdb
-D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe
-D:\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.pdb
-D:\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Linkspector.Console.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe.config
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.exe
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Jenu.Console.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Linkspector.Console.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.exe
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\obj\Debug\Jenu.Console.pdb
+C:\Users\Anthony\OneDrive\Documents\Projects\LinkspectorJS\Linkspector.Console\bin\Debug\Linkspector.Console.exe.config

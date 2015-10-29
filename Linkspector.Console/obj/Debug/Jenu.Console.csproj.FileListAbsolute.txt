@@ -1,9 +1,0 @@
-D:\Projects\Jenu\Jenu.Console\bin\Debug\Jenu.Console.exe.config
-D:\Projects\Jenu\Jenu.Console\bin\Debug\Jenu.Console.exe
-D:\Projects\Jenu\Jenu.Console\bin\Debug\Jenu.Console.pdb
-D:\Projects\Jenu\Jenu.Console\obj\Debug\Jenu.Console.csprojResolveAssemblyReference.cache
-D:\Projects\Jenu\Jenu.Console\obj\Debug\Jenu.Console.exe
-D:\Projects\Jenu\Jenu.Console\obj\Debug\Jenu.Console.pdb
-D:\Projects\LinkspectorJS\Jenu.Console\bin\Debug\Jenu.Console.exe.config
-D:\Projects\LinkspectorJS\Jenu.Console\obj\Debug\Jenu.Console.exe
-D:\Projects\LinkspectorJS\Jenu.Console\obj\Debug\Jenu.Console.pdb
