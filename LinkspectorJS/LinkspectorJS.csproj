@@ -51,7 +51,6 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\controllers\resourceLogController.js" />
-    <Content Include="Jenu.rar.jpg" />
     <Content Include="lib\angular\angular.js" />
     <Content Include="lib\jasmine\boot.js" />
     <Content Include="lib\jasmine\console.js" />
@@ -60,11 +59,6 @@
     <Content Include="lib\jasmine\jasmine.js" />
     <Content Include="lib\jasmine\jasmine_favicon.png" />
     <Content Include="css\jasmine.css" />
-    <Content Include="Scripts\Jenu\Downloader.js" />
-    <Content Include="Scripts\Jenu\PageInfoParser.js" />
-    <Content Include="Scripts\Jenu\ResourceLog.js" />
-    <Content Include="Scripts\Jenu\Resource.js" />
-    <Content Include="Scripts\Jenu\Scanner.js" />
     <Content Include="lib\angular\angular.min.js.map" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -76,9 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
-    <Content Include="Scripts\Jenu\TestHarness.js" />
-    <Content Include="Scripts\Jenu\Url.js" />
-    <Content Include="Scripts\Jenu\ContentParser.js" />
     <Content Include="Scripts\LinkspectorJS\ContentParser.js" />
     <Content Include="Scripts\LinkspectorJS\Downloader.js" />
     <Content Include="Scripts\LinkspectorJS\PageInfoParser.js" />

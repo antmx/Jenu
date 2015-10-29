@@ -1,8 +1,8 @@
 ﻿
-/// <reference path="~/Scripts/LinkspectorJS/ResourceLog.js" />
-/// <reference path="~/Scripts/LinkspectorJS/Scanner.js" />
-/// <reference path="~/Scripts/LinkspectorJS/ContentParser.js" />
-/// <reference path="~/Scripts/LinkspectorJS/PageInfoParser.js" />
+/// <reference path="../../Scripts/LinkspectorJS/ResourceLog.js" />
+/// <reference path="../../Scripts/LinkspectorJS/Scanner.js" />
+/// <reference path="../../Scripts/LinkspectorJS/ContentParser.js" />
+/// <reference path="../../Scripts/LinkspectorJS/PageInfoParser.js" />
 
 /// <summary>ResourceLog Controller</summary>
 

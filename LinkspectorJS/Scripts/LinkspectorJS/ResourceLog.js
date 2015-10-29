@@ -1,5 +1,5 @@
 ﻿
-/// <reference path="~/Scripts/Utilities/Namespace.js" />
+/// <reference path="../Utilities/Namespace.js" />
 /// <reference path="Resource.js" />
 /// <reference path="Url.js" />
 

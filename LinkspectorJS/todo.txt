@@ -2,26 +2,10 @@
 ###################################
 
 Implement parser to extract URLs from HTML tag attributes of type '%URI;' in the following table: http://www.w3.org/TR/REC-html40/index/attributes.html
-
-###################################
-
-Implement Resource.LogStatusCategory and use in:
-	<tr ng-repeat="entry in ResourceLog.Entries" class="logstatus-{{entry.LogStatusCssSafe()}}">
+DONE
 
 ###################################
 Setup Guide
 CORS on IIS 6: http://enable-cors.org/server_iis6.html
 
 ###################################
-
-Angie
-Phone number: 07969202134
-Account number: 74227267
-Login: 07969202134 /angiesm@ntlworld.com
-PWD: wallace
-Orange Customer Services: 07973 100 150
-
-
-github.com
-UID=a....
-PWD=ghub20Eleven
